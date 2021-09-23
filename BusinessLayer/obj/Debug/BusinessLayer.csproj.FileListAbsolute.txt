@@ -1,0 +1,6 @@
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
