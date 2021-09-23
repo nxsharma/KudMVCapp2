@@ -43,7 +43,7 @@ namespace BusinessLayer
             }
         }
 
-        public void AddEmployer(Employee employee)
+        public void AddEmployee(Employee employee)
         {
             string connectionString =
            ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
