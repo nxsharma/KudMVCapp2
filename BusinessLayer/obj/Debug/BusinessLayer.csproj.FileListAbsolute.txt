@@ -4,3 +4,9 @@ C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessL
 C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.pdb
 C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete

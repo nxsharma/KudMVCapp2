@@ -18,31 +18,82 @@ namespace KudMVCapp2.Controllers
         }
 
         [HttpGet]
-        public  ActionResult Create()
+        [ActionName("Create")]
+        public  ActionResult Create_Get()
         {
             return View();
         }
 
-        [HttpPost]
-        //public ActionResult Create(FormCollection formCollection)
-        public ActionResult Create(string name, string gender, string city, DateTime dateOfBirth)
+        [HttpGet]        
+        public ActionResult Edit(int id)
         {
-            Employee employee = new Employee();
-            employee.Name = name;
-            employee.Gender = gender;
-            employee.City = city;
-            employee.DateOfBirth = dateOfBirth;
+            EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer();
+            Employee employee =  employeeBusinessLayer.Employees.Single(emp => emp.ID == id);
+            return View(employee);
+            
+        }
+
+        [HttpPost]
+        [ActionName("Edit")]
+        //public ActionResult Edit_post(int id)
+        public ActionResult Edit_post([Bind(Include ="Id, Gender, City, DateOfBirth"]Employee employee)
+        {
+            EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer();
+            // Employee employee = employeeBusinessLayer.Employees.Single(x => x.ID == id);
+            employee.Name = employeeBusinessLayer.Employees.Single(x => x.ID == employee.ID).Name;
+            //Include list
+            // UpdateModel(employee, new string[] { "ID", "Gender", "City", "DateOfBirth" });
+
+            //exclude list
+            UpdateModel(employee, null, null, new string[] { "Name" });
+
+
+            if (ModelState.IsValid)
+            {
+                
+                employeeBusinessLayer.SaveEmployeeDetails(employee);
+
+                return RedirectToAction("Index");
+
+
+            }
+            return View(employee);
+
+        }
+
+        [HttpPost]
+        [ActionName("Create")]
+        //public ActionResult Create(FormCollection formCollection)
+        //public ActionResult Create(string name, string gender, string city, DateTime dateOfBirth)
+        //public ActionResult Create(Employee employee)
+        public ActionResult Create_Post(Employee employee)
+        {
+            //Employee employee = new Employee();
+            //TryUpdateModel(employee);
+            
+            //Employee employee = new Employee();
+            //employee.Name = name;
+            //employee.Gender = gender;
+            //employee.City = city;
+            //employee.DateOfBirth = dateOfBirth;
+
             //Employee employee = new Employee();
             //employee.Name = formCollection["Name"];
             //employee.Gender = formCollection["Gender"];
             //employee.City = formCollection["City"];
             //employee.DateOfBirth = Convert.ToDateTime(formCollection["DateOfBirth"]);
+            if (ModelState.IsValid)
+            {
+                    //Employee employee = new Employee();
+                    //UpdateModel(employee);
+                EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer();
 
-            EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer();
+                employeeBusinessLayer.AddEmployee(employee);
 
-            employeeBusinessLayer.AddEmployee(employee);
+                return RedirectToAction("Index");
+            }
 
-            return RedirectToAction("Index");
+            return View();
             //just to write in the webpage, it's not storing in the database. code above stores it in database
             //foreach(string key in formCollection.AllKeys)
             //{

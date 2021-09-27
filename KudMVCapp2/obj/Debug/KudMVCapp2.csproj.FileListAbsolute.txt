@@ -79,3 +79,8 @@ C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\obj\Debug\KudMVCapp2.c
 C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\obj\Debug\KudMVCapp2.csproj.CopyComplete
 C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\obj\Debug\KudMVCapp2.dll
 C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\obj\Debug\KudMVCapp2.pdb
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\bin\EntityFramework.dll
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\bin\EntityFramework.SqlServer.dll
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\bin\BusinessLayer.dll.config
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\bin\EntityFramework.xml
+C:\Users\nikhil.sharma\source\repos\KudMVCapp2\KudMVCapp2\bin\EntityFramework.SqlServer.xml
