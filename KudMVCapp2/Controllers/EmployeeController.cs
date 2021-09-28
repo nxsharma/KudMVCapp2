@@ -36,18 +36,23 @@ namespace KudMVCapp2.Controllers
         [HttpPost]
         [ActionName("Edit")]
         //public ActionResult Edit_post(int id)
-        public ActionResult Edit_post([Bind(Include ="Id, Gender, City, DateOfBirth"]Employee employee)
+        //include list
+        //public ActionResult Edit_post([Bind(Include ="Id, Gender, City, DateOfBirth"]Employee employee)
+
+        //Exclude list
+        // public ActionResult Edit_post([Bind(Exclude = "Name"] Employee employee)
+        public ActionResult Edit_post(int id)
         {
             EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer();
-            // Employee employee = employeeBusinessLayer.Employees.Single(x => x.ID == id);
-            employee.Name = employeeBusinessLayer.Employees.Single(x => x.ID == employee.ID).Name;
+            Employee employee = employeeBusinessLayer.Employees.Single(x => x.ID == id);
+            // BINDING method using Exclude employee.Name = employeeBusinessLayer.Employees.Single(x => x.ID == employee.ID).Name;
             //Include list
             // UpdateModel(employee, new string[] { "ID", "Gender", "City", "DateOfBirth" });
 
             //exclude list
-            UpdateModel(employee, null, null, new string[] { "Name" });
+            //UpdateModel(employee, null, null, new string[] { "Name" });
 
-
+            UpdateModel<IEmployee>(employee);
             if (ModelState.IsValid)
             {
                 
@@ -102,6 +107,13 @@ namespace KudMVCapp2.Controllers
             //    Response.Write("<br/>");
             //}
             //return View();
+        }
+
+        public ActionResult Delete(int id)
+        {
+            EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer();
+            employeeBusinessLayer.DeleteEmployee(id);
+            return RedirectToAction("Index");
         }
     }
     
